@@ -6,6 +6,8 @@
 #define L_BASE 0
 #define L_LOWER 8
 #define L_RAISE 16
+#define L_NAV 256
+#define L_NUM 1024
 #define L_ADJUST 65536
 #define L_ADJUST_TRI 65560
 
@@ -22,6 +24,12 @@ const char *read_layer_state(void) {
     break;
   case L_LOWER:
     snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Lower");
+    break;
+  case L_NAV:
+    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Navigation");
+    break;
+  case L_NUM:
+    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Number");
     break;
   case L_ADJUST:
   case L_ADJUST_TRI:
